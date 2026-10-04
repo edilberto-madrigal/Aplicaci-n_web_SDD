@@ -1,0 +1,282 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #FAFAF9;
+  color: #292524;
+  line-height: 1.5;
+}
+
+.contenedor {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #78716C;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.racha {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 16px;
+  margin-bottom: 24px;
+  text-align: center;
+  border: 1px solid #E7E5E4;
+}
+
+.racha-actual {
+  margin-bottom: 20px;
+}
+
+.racha-numero {
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #1C1917;
+  line-height: 1;
+}
+
+.racha-emoji {
+  font-size: 2rem;
+  margin-left: 4px;
+}
+
+.racha-texto {
+  color: #78716C;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.semana {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.dia-semana {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: #F5F5F4;
+  color: #A8A29E;
+}
+
+.dia-semana.activo {
+  background: #F59E0B;
+  color: #1C1917;
+}
+
+.dia-semana.hoy {
+  border: 2px solid #F59E0B;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.stat-numero {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1C1917;
+}
+
+.stat-texto {
+  font-size: 0.8rem;
+  color: #78716C;
+}
+
+.heatmap-section {
+  background: #ffffff;
+  border: 1px solid #E7E5E4;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.heatmap {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.heatmap-dia {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 6px;
+  background: #F5F5F4;
+  border: 1px solid #E7E5E4;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.heatmap-dia:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.98);
+}
+
+.heatmap-dia.intensidad-0 {
+  background: #F5F5F4;
+}
+
+.heatmap-dia.intensidad-1 {
+  background: #FDE68A;
+}
+
+.heatmap-dia.intensidad-2 {
+  background: #FBBF24;
+}
+
+.heatmap-dia.intensidad-3 {
+  background: #F59E0B;
+}
+
+.heatmap-dia.intensidad-4 {
+  background: #D97706;
+}
+
+.heatmap-estado {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #78716C;
+}
+
+.objetivo-section {
+  background: #ffffff;
+  border: 1px solid #E7E5E4;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+#objetivo-texto {
+  font-size: 0.95rem;
+  color: #57534E;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+#objetivo-texto .progreso {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1C1917;
+  margin-top: 4px;
+}
+
+#objetivo-texto .porcentaje {
+  display: block;
+  font-size: 0.85rem;
+  color: #78716C;
+  margin-top: 2px;
+}
+
+#formulario-objetivo {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+#formulario-objetivo input {
+  flex: 1;
+}
+
+#formulario-objetivo button {
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+form {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+  border: 1px solid #E7E5E4;
+}
+
+label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #57534E;
+}
+
+input {
+  padding: 10px 12px;
+  border: 1px solid #D6D3D1;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #FAFAF9;
+}
+
+input:focus {
+  outline: 2px solid #F59E0B;
+  outline-offset: -1px;
+  border-color: #F59E0B;
+}
+
+button {
+  margin-top: 8px;
+  padding: 12px;
+  background: #F59E0B;
+  color: #1C1917;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+button:hover {
+  background: #D97706;
+}
+
+ul {
+  list-style: none;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #E7E5E4;
+  padding: 8px 16px;
+}
+
+li {
+  padding: 12px 0;
+  border-bottom: 1px solid #F5F5F4;
+  font-size: 0.95rem;
+}
+
+li:last-child {
+  border-bottom: none;
+}

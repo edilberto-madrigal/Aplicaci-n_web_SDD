@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diario de Estudio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="contenedor">
+    <h1>Diario de Estudio</h1>
+
+    <section class="racha">
+      <div class="racha-actual">
+        <span class="racha-numero" id="racha">0</span>
+        <span class="racha-emoji">🔥</span>
+        <p class="racha-texto">días de racha</p>
+      </div>
+      <div class="semana" id="semana"></div>
+      <div class="stats-grid">
+        <div class="stat">
+          <span class="stat-numero" id="mejor-racha">0</span>
+          <span class="stat-texto">mejor racha</span>
+        </div>
+        <div class="stat">
+          <span class="stat-numero" id="minutos-semana">0 min</span>
+          <span class="stat-texto">esta semana</span>
+        </div>
+        <div class="stat">
+          <span class="stat-numero" id="dias-mes">0</span>
+          <span class="stat-texto">días este mes</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="heatmap-section">
+      <h2>Mapa de calor</h2>
+      <div id="heatmap" class="heatmap" aria-label="Mapa de calor de estudio"></div>
+      <p id="heatmap-estado" class="heatmap-estado">Sin actividad reciente</p>
+    </section>
+
+    <section class="objetivo-section">
+      <h2>Objetivo semanal</h2>
+      <div id="objetivo-contenido">
+        <p id="objetivo-texto">Fija tu objetivo semanal</p>
+        <form id="formulario-objetivo">
+          <input type="number" id="input-objetivo" min="1" placeholder="Minutos por semana" required>
+          <button type="submit">Guardar objetivo</button>
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <h2>Registrar sesión</h2>
+      <form id="formulario">
+        <label for="fecha">Fecha</label>
+        <input type="date" id="fecha" required>
+
+        <label for="tema">Tema</label>
+        <input type="text" id="tema" required>
+
+        <label for="minutos">Minutos</label>
+        <input type="number" id="minutos" min="1" required>
+
+        <button type="submit">Guardar sesión</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Sesiones</h2>
+      <ul id="lista-sesiones"></ul>
+    </section>
+  </main>
+
+  <script src="streak.js"></script>
+  <script src="heat-map.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
